@@ -3,9 +3,10 @@ from __future__ import print_function, absolute_import, unicode_literals, divisi
 import os
 import unittest
 
-from tnt.namadapter import BronxNamelistAdapter, NO_SORTING
+from thenamelisttool.namadapter import BronxNamelistAdapter, NO_SORTING
 
-tpl_path = os.path.join(os.path.realpath(__file__), '../../../site/tnt/templates')
+tpl_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
+                        '../src/thenamelisttool/templates')
 tpl_path = os.path.normpath(tpl_path)
 
 

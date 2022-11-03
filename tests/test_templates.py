@@ -4,12 +4,12 @@ import io
 import os
 import unittest
 
-from bronx.fancies import loggers
-import tnt
+import thenamelisttool as tnt
 
 tloglevel = 9999
 
-tpl_path = os.path.join(os.path.realpath(__file__), '../../../site/tnt/templates')
+tpl_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
+                        '../src/thenamelisttool/templates')
 tpl_path = os.path.normpath(tpl_path)
 
 data_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data')

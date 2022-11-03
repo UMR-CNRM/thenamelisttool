@@ -5,10 +5,11 @@ import unittest
 
 from bronx.fancies import loggers
 
-from tnt.config import TntDirective, TntStackDirective
-from tnt.config import TntDirectiveUnkownError, TntDirectiveValueError, TntStackDirectiveError
+from thenamelisttool.config import TntDirective, TntStackDirective
+from thenamelisttool.config import TntDirectiveUnkownError, TntDirectiveValueError, TntStackDirectiveError
 
-tpl_path = os.path.join(os.path.realpath(__file__), '../../../site/tnt/templates')
+tpl_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
+                        '../src/thenamelisttool/templates')
 tpl_path = os.path.normpath(tpl_path)
 
 
