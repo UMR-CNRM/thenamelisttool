@@ -24,5 +24,3 @@ from __future__ import print_function, absolute_import, unicode_literals, divisi
 from . import config
 from . import namadapter
 from . import util
-
-__version__ = '1.2.4'
