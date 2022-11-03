@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """
@@ -9,19 +8,12 @@ from __future__ import print_function, absolute_import, unicode_literals, divisi
 
 import argparse
 import os
-import re
-import sys
 
-# Automatically set the python path
-sitepath = re.sub('{0:}tnt{0:}bin$'.format(os.path.sep), '',
-                  os.path.dirname(os.path.realpath(__file__)))
-sys.path.insert(0, sitepath)
-
-import tnt
+import thenamelisttool as tnt
 
 
-if __name__ == '__main__':
-
+def main():
+    """Start the tntcompose CLI."""
     _tmpl = 'tmpl_compose-recipe.tnt'
 
     parser = argparse.ArgumentParser(description='TNT - The Namelist Tool - Compose: ' +

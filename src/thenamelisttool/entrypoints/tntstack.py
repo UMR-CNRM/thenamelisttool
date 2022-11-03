@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """
@@ -10,23 +9,16 @@ from __future__ import print_function, absolute_import, unicode_literals, divisi
 import argparse
 import io
 import os
-import re
-import sys
 import yaml
 
-# Automatically set the python path
-sitepath = re.sub('{0:}tnt{0:}bin$'.format(os.path.sep), '',
-                  os.path.dirname(os.path.realpath(__file__)))
-sys.path.insert(0, sitepath)
-
-import tnt
-from tnt.namadapter import NO_SORTING, FIRST_ORDER_SORTING, SECOND_ORDER_SORTING
+import thenamelisttool as tnt
+from thenamelisttool.namadapter import NO_SORTING, FIRST_ORDER_SORTING, SECOND_ORDER_SORTING
 
 _tmpl = 'tmpl_directives.tntstack.yaml'
 
 
-if __name__ == '__main__':
-
+def main():
+    """Run the tntstack CLI."""
     parser = argparse.ArgumentParser(description="TNT Stack - A namelist's pack updater.",
                                      epilog='End of help for: %(prog)s')
 

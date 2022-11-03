@@ -8,7 +8,8 @@ work with namelists or pack of namelists (update them, compare them, ...).
 
 The Sphinx documentation of this package is few. However, for end users, the
 entry points to this package are the ``tnt.py``, ``tntdiff.py`` and
-``tntstack.py`` command line utilities provided in the ``bin`` subdirectory.
+``tntstack.py`` command line utilities provided in the ``tools`` subdirectory
+(or in your ``$PATH`` when ``pip`` is used).
 These command line utility are provided with an embedded documentation accessible
 with the `-h` option (e.g. ``tnt.py -h``).
 

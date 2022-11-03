@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """
@@ -25,18 +24,12 @@ import argparse
 import difflib
 import io
 import os
-import re
 import sys
 
 
-# Automatically set the python path
-sitepath = re.sub('{0:}tnt{0:}bin$'.format(os.path.sep), '',
-                  os.path.dirname(os.path.realpath(__file__)))
-sys.path.insert(0, sitepath)
-
 from bronx.fancies.display import printstatus
 from bronx.stdtypes.tracking import MappingTracker
-import tnt
+import thenamelisttool as tnt
 
 _outfilename = 'tntdiffpack.out'
 
@@ -50,7 +43,8 @@ def _compute_diffs(nambefore, namafter, modified):
     return diffs
 
 
-if __name__ == '__main__':
+def main():
+    """Run the tntdiffpack CLI."""
     program_desc = '%(prog)s -- ' + __import__('__main__').__doc__.lstrip('\n')
     parser = argparse.ArgumentParser(description=program_desc, epilog='End of help for: %(prog)s',
                                      formatter_class=argparse.RawDescriptionHelpFormatter)

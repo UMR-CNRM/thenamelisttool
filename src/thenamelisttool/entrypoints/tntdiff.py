@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """
@@ -30,20 +29,12 @@ import argparse
 import difflib
 import io
 import os
-import re
 import six
 import subprocess
-import sys
 import tempfile
 
-
-# Automatically set the python path
-sitepath = re.sub('{0:}tnt{0:}bin$'.format(os.path.sep), '',
-                  os.path.dirname(os.path.realpath(__file__)))
-sys.path.insert(0, sitepath)
-
 from bronx.stdtypes.tracking import Tracker, MappingTracker
-import tnt
+import thenamelisttool as tnt
 
 _outfilename = 'tntdiff.out'
 
@@ -95,7 +86,7 @@ def extdiff(before_filename, after_filename, tool):
                 raise ValueError("Unknown diff tool.")
 
 
-def main(before_filename, after_filename, outfilename):
+def actual_main(before_filename, after_filename, outfilename):
     """
     Compare two namelists and return directives to go from one (before) to the
     other (after).
@@ -156,7 +147,8 @@ def main(before_filename, after_filename, outfilename):
             outfh.write(outstr)
 
 
-if __name__ == '__main__':
+def main():
+    """Start the tntdiff CLI."""
     program_desc = '%(prog)s -- ' + __import__('__main__').__doc__.lstrip('\n')
     parser = argparse.ArgumentParser(description=program_desc, epilog='End of help for: %(prog)s',
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -197,4 +189,4 @@ if __name__ == '__main__':
         extdiff(args.before, args.after, args.external)
     else:
         print("Diff directives written in: " + os.path.abspath(args.outputfilename + '.py'))
-        main(args.before, args.after, args.outputfilename + '.py')
+        actual_main(args.before, args.after, args.outputfilename + '.py')
