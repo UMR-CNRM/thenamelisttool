@@ -15,7 +15,7 @@ import shutil
 
 from bronx.fancies import loggers
 from bronx.fancies.colors import termcolors
-from tnt.namadapter import BronxNamelistAdapter, NO_SORTING, FIRST_ORDER_SORTING, SECOND_ORDER_SORTING
+from .namadapter import BronxNamelistAdapter, NO_SORTING, FIRST_ORDER_SORTING, SECOND_ORDER_SORTING
 from .config import TntRecipe
 
 tntlog = loggers.getLogger('tntlog')
