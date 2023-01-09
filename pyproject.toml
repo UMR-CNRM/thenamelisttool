@@ -3,7 +3,7 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "thenamelisttool-beta"
+name = "thenamelisttool"
 description = "Provides command line tools useful to work with namelists or pack of namelists."
 readme = "README.md"
 requires-python = ">=3.7"
@@ -19,12 +19,12 @@ classifiers = [
 dependencies = [
     "six",
     "pyyaml",
-    "bronx-beta",
+    "bronx",
 ]
 dynamic = ["version"]
 
 [project.urls]
-repository = "https://github.com/meunierlf/thenamelisttool-beta"
+repository = "https://github.com/meunierlf/thenamelisttool"
 
 [project.scripts]
 "tnt.py" = "thenamelisttool.entrypoints.tnt:main"
