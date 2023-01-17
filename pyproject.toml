@@ -37,6 +37,9 @@ repository = "https://github.com/meunierlf/thenamelisttool"
 docs = [
     "sphinx",
 ]
+tests = [
+    "pyyaml",
+]
 
 [tool.setuptools.package-data]
 "thenamelisttool.templates" = ["*", ]
