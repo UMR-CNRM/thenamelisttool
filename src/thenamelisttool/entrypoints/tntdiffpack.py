@@ -85,7 +85,7 @@ def main():
     # Expand the generator objects into lists
     print('Creating diff outputs. It may take a while (depending on the amount of changes).')
     for i, n in enumerate(tracker.updated):
-        computediffs[n] = [l for l in computediffs[n]]
+        computediffs[n] = [line for line in computediffs[n]]
 
     outtpl = tnt.config.get_template('tnt-diffpack-output.tpl', encoding='utf_8')
 

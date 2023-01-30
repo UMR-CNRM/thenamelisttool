@@ -244,10 +244,10 @@ def colorise_diff(lines):
     """Colorise the lines of any kind of difflib outputs."""
     newdiff = list()
     prevline = None
-    for l in lines:
+    for line in lines:
         if prevline:
-            newdiff.append(_color_diffline(prevline, l))
-        prevline = l
+            newdiff.append(_color_diffline(prevline, line))
+        prevline = line
     newdiff.append(_color_diffline(prevline))
     return newdiff
 
